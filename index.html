@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tani Singh Portfolio</title>
+    <!-- Google Font: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
@@ -28,12 +30,12 @@
 
         /* Homepage background with parallax effect */
        #home {
-            background: url('pic.jpg') no-repeat center center fixed;
-            background-size: cover;
-            position: relative;
-            z-index: 1;
-            height: 100vh;
-        }
+    background: url('pic.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+}
 
         #home::before {
             content: '';
@@ -159,44 +161,43 @@
         console.log("Babel script started.");
 
         // Sidebar component
-        // Sidebar component
-const Sidebar = ({ darkMode, setDarkMode, showSidebar, toggleSidebar }) => {
-    return (
-        <div>
-            <button
-                onClick={toggleSidebar}
-                className="fixed top-4 left-4 z-50 p-2 rounded-full bg-blue-700 text-white md:hidden shadow-lg"
-                aria-label="Toggle navigation"
-            >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-            <div className={`fixed top-0 left-0 h-full w-64 ${darkMode ? 'bg-gray-800 text-white' : 'bg-gradient-to-b from-blue-900 to-purple-900 text-white'} p-6 shadow-lg z-40 sidebar-transition ${showSidebar ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0`}>
-                <h1 className="text-3xl font-extrabold mb-10 text-center tracking-wide">Tani Singh</h1>
-                <ul className="space-y-5 text-lg font-medium">
-                    <li><a href="#home" onClick={toggleSidebar} className="block py-2 px-3 rounded-lg hover:bg-blue-700 hover:text-white transition transform hover:translate-x-1">Home</a></li>
-                    <li><a href="#who-i-am" onClick={toggleSidebar} className="block py-2 px-3 rounded-lg hover:bg-blue-700 hover:text-white transition transform hover:translate-x-1">Who I Am</a></li>
-                    <li><a href="#expertise" onClick={toggleSidebar} className="block py-2 px-3 rounded-lg hover:bg-blue-700 hover:text-white transition transform hover:translate-x-1">Expertise</a></li>
-                    <li><a href="#creations" onClick={toggleSidebar} className="block py-2 px-3 rounded-lg hover:bg-blue-700 hover:text-white transition transform hover:translate-x-1">Creations</a></li>
-                    <li><a href="#journey" onClick={toggleSidebar} className="block py-2 px-3 rounded-lg hover:bg-blue-700 hover:text-white transition transform hover:translate-x-1">Journey</a></li>
-                    <li><a href="#vision" onClick={toggleSidebar} className="block py-2 px-3 rounded-lg hover:bg-blue-700 hover:text-white transition transform hover:translate-x-1">Vision</a></li>
-                    <li><a href="#blog" onClick={toggleSidebar} className="block py-2 px-3 rounded-lg hover:bg-blue-700 hover:text-white transition transform hover:translate-x-1">Blog</a></li>
-                    <li><a href="#ventures" onClick={toggleSidebar} className="block py-2 px-3 rounded-lg hover:bg-blue-700 hover:text-white transition transform hover:translate-x-1">Ventures</a></li>
-                    <li><a href="#reach-out" onClick={toggleSidebar} className="block py-2 px-3 rounded-lg hover:bg-blue-700 hover:text-white transition transform hover:translate-x-1">Reach Out</a></li>
-                </ul>
-                <div className="mt-8">
+        const Sidebar = ({ darkMode, setDarkMode, showSidebar, toggleSidebar }) => {
+            return (
+                <div>
                     <button
-                        onClick={() => setDarkMode(!darkMode)}
-                        className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md transform hover:scale-105 font-bold text-lg"
+                        onClick={toggleSidebar}
+                        className="fixed top-4 left-4 z-50 p-2 rounded-full bg-blue-700 text-white md:hidden shadow-lg"
+                        aria-label="Toggle navigation"
                     >
-                        {darkMode ? 'Light Mode' : 'Dark Mode'}
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
                     </button>
+                    <div className={`fixed top-0 left-0 h-full w-64 ${darkMode ? 'bg-gray-800 text-white' : 'bg-gradient-to-b from-blue-900 to-purple-900 text-white'} p-6 shadow-lg z-40 sidebar-transition ${showSidebar ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0`}>
+                        <h1 className="text-3xl font-extrabold mb-10 text-center tracking-wide">Tani Singh</h1>
+                        <ul className="space-y-5 text-lg font-medium">
+                            <li><a href="#home" onClick={toggleSidebar} className="block py-2 px-3 rounded-lg hover:bg-blue-700 hover:text-white transition transform hover:translate-x-1">Home</a></li>
+                            <li><a href="#who-i-am" onClick={toggleSidebar} className="block py-2 px-3 rounded-lg hover:bg-blue-700 hover:text-white transition transform hover:translate-x-1">Who I Am</a></li>
+                            <li><a href="#expertise" onClick={toggleSidebar} className="block py-2 px-3 rounded-lg hover:bg-blue-700 hover:text-white transition transform hover:translate-x-1">Expertise</a></li>
+                            <li><a href="#creations" onClick={toggleSidebar} className="block py-2 px-3 rounded-lg hover:bg-blue-700 hover:text-white transition transform hover:translate-x-1">Creations</a></li>
+                            <li><a href="#journey" onClick={toggleSidebar} className="block py-2 px-3 rounded-lg hover:bg-blue-700 hover:text-white transition transform hover:translate-x-1">Journey</a></li>
+                            <li><a href="#vision" onClick={toggleSidebar} className="block py-2 px-3 rounded-lg hover:bg-blue-700 hover:text-white transition transform hover:translate-x-1">Vision</a></li>
+                            <li><a href="#blog" onClick={toggleSidebar} className="block py-2 px-3 rounded-lg hover:bg-blue-700 hover:text-white transition transform hover:translate-x-1">Blog</a></li>
+                            <li><a href="#ventures" onClick={toggleSidebar} className="block py-2 px-3 rounded-lg hover:bg-blue-700 hover:text-white transition transform hover:translate-x-1">Ventures</a></li>
+                            <li><a href="#reach-out" onClick={toggleSidebar} className="block py-2 px-3 rounded-lg hover:bg-blue-700 hover:text-white transition transform hover:translate-x-1">Reach Out</a></li>
+                        </ul>
+                      <div className="mt-10">
+    <button
+        onClick={() => setDarkMode(!darkMode)}
+        className="w-full bg-blue-600 text-white px-6 py-4 rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md transform hover:scale-105 font-bold text-lg"
+    >
+        {darkMode ? 'Light Mode' : 'Dark Mode'}
+    </button>
+</div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    );
-};
+            );
+        };
 
         // Hero section
         const Hero = () => {
@@ -256,7 +257,6 @@ const Sidebar = ({ darkMode, setDarkMode, showSidebar, toggleSidebar }) => {
                 { name: "React", level: 75 },
                 { name: "Node.js", level: 70 },
                 { name: "MongoDB", level: 65 },
-                { name: "MERN Stack", level: 70 },
                 { name: "C++", level: 80 },
                 { name: "DSA", level: 75 },
                 { name: "Git", level: 70 },
@@ -291,84 +291,83 @@ const Sidebar = ({ darkMode, setDarkMode, showSidebar, toggleSidebar }) => {
         };
 
         // Projects section with filter
-        const Projects = () => {
-            const projects = [
-                {
-                    title: "Weather App",
-                    description: "A dynamic weather forecasting app with a cosmic-themed UI and custom alerts.",
-                    tech: "JavaScript, HTML, CSS, API",
-                    category: "Web App",
-                    link: "https://uniqueweatherappbytani.netlify.app",
-                },
-                {
-                    title: "Advanced Binary Search Tree CRUD Tool",
-                    description: "A web tool with CRUD operations, node visualization, and 3D animations.",
-                    tech: "HTML, CSS, JavaScript",
-                    category: "Tool",
-                    link: "https://tanisingh134.github.io/boardinfinityinfinitymajorproject/",
-                },
-                {
-                    title: "Personalized Online Fitness Coaching",
-                    description: "A platform offering custom fitness plans and motivation, accessible anytime.",
-                    tech: "HTML, CSS, JavaScript",
-                    category: "Web App",
-                    link: "https://drive.google.com/uc?export=download&id=1QHZjtwXmgqQgTTyPxck5l9QvVDdnGj-8",
-                },
-            ];
+const Projects = () => {
+    const projects = [
+        {
+            title: "Weather App",
+            description: "A dynamic weather forecasting app with a cosmic-themed UI and custom alerts.",
+            tech: "JavaScript, HTML, CSS, API",
+            category: "Web App",
+            link: "https://uniqueweatherappbytani.netlify.app",
+        },
+        {
+            title: "Advanced Binary Search Tree CRUD Tool",
+            description: "A web tool with CRUD operations, node visualization, and 3D animations.",
+            tech: "HTML, CSS, JavaScript",
+            category: "Tool",
+            link: "https://tanisingh134.github.io/boardinfinityinfinitymajorproject/",
+        },
+        {
+            title: "Personalized Online Fitness Coaching",
+            description: "A platform offering custom fitness plans and motivation, accessible anytime.",
+            tech: "HTML, CSS, JavaScript",
+            category: "Web App",
+            link: "https://tanisingh134.github.io/newproject/",
+        },
+    ];
 
-            const [filter, setFilter] = React.useState("All");
+    const [filter, setFilter] = React.useState("All");
 
-            const filteredProjects = filter === "All" ? projects : projects.filter(project => project.category === filter);
+    const filteredProjects = filter === "All" ? projects : projects.filter(project => project.category === filter);
 
-            return (
-                <section id="creations" className="py-20 bg-blue-50 dark:bg-gray-900 text-gray-800 dark:text-white">
-                    <div className="container mx-auto p-6">
-                        <h2 className="text-4xl font-bold mb-10 text-center text-green-700 dark:text-green-400">Creations</h2>
-                      <div className="flex justify-center space-x-4 mb-8 flex-wrap">
-                        <button
-                            onClick={() => setFilter("All")}
-                            className={`px-4 py-2 rounded-full ${filter === "All" ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-black dark:text-white'} hover:bg-blue-500 hover:text-white transition mt-2`}
+    return (
+        <section id="creations" className="py-20 bg-blue-50 dark:bg-gray-900 text-gray-800 dark:text-white">
+            <div className="container mx-auto p-6">
+                <h2 className="text-4xl font-bold mb-10 text-center text-green-700 dark:text-green-400">Creations</h2>
+              <div className="flex justify-center space-x-4 mb-8">
+    <button
+        onClick={() => setFilter("All")}
+        className={`px-4 py-2 rounded-full ${filter === "All" ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-black dark:text-white'} hover:bg-blue-500 hover:text-white transition`}
+    >
+        All
+    </button>
+    <button
+        onClick={() => setFilter("Web App")}
+        className={`px-4 py-2 rounded-full ${filter === "Web App" ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-black dark:text-white'} hover:bg-blue-500 hover:text-white transition`}
+    >
+        Web Apps
+    </button>
+    <button
+        onClick={() => setFilter("Tool")}
+        className={`px-4 py-2 rounded-full ${filter === "Tool" ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-black dark:text-white'} hover:bg-blue-500 hover:text-white transition`}
+    >
+        Tools
+    </button>
+</div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    {filteredProjects.map((project) => (
+                        <div
+                            key={project.title}
+                            className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-green-200 dark:border-green-700 hover:shadow-2xl hover:bg-blue-100 dark:hover:bg-gray-600 transition-all duration-300 transform project-card animate-fade-in"
                         >
-                            All
-                        </button>
-                        <button
-                            onClick={() => setFilter("Web App")}
-                            className={`px-4 py-2 rounded-full ${filter === "Web App" ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-black dark:text-white'} hover:bg-blue-500 hover:text-white transition mt-2`}
-                        >
-                            Web Apps
-                        </button>
-                        <button
-                            onClick={() => setFilter("Tool")}
-                            className={`px-4 py-2 rounded-full ${filter === "Tool" ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-black dark:text-white'} hover:bg-blue-500 hover:text-white transition mt-2`}
-                        >
-                            Tools
-                        </button>
-                    </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                            {filteredProjects.map((project) => (
-                                <div
-                                    key={project.title}
-                                    className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-green-200 dark:border-green-700 hover:shadow-2xl hover:bg-blue-100 dark:hover:bg-gray-600 transition-all duration-300 transform project-card animate-fade-in"
-                                >
-                                    <h3 className="text-2xl font-bold mb-3 text-gray-800 dark:text-white">{project.title}</h3>
-                                    <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">{project.description}</p>
-                                    <p className="text-sm text-gray-500 dark:text-gray-500 mb-5 font-semibold">Tech: {project.tech}</p>
-                                    <a
-                                        href={project.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-700 transition-colors duration-300 mt-2 shadow-md"
-                                    >
-                                        View Project
-                                    </a>
-                                </div>
-                            ))}
+                            <h3 className="text-2xl font-bold mb-3 text-gray-800 dark:text-white">{project.title}</h3>
+                            <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">{project.description}</p>
+                            <p className="text-sm text-gray-500 dark:text-gray-500 mb-5 font-semibold">Tech: {project.tech}</p>
+                            <a
+                                href={project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-700 transition-colors duration-300 mt-2 shadow-md"
+                            >
+                                View Project
+                            </a>
                         </div>
-                    </div>
-                </section>
-            );
-        };
-
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
         // Vision section
         const Vision = () => (
             <section id="vision" className="py-20 bg-blue-100 dark:bg-gray-800 text-gray-800 dark:text-white">
@@ -388,18 +387,13 @@ const Sidebar = ({ darkMode, setDarkMode, showSidebar, toggleSidebar }) => {
             <section id="blog" className="py-20 bg-blue-50 dark:bg-gray-900 text-gray-800 dark:text-white">
                 <div className="container mx-auto p-6">
                     <h2 className="text-4xl font-bold mb-10 text-center text-orange-700 dark:text-orange-400">Blog</h2>
-                    <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:bg-blue-100 dark:hover:bg-gray-600 transition-shadow duration-300 transform hover:-translate-y-1 max-w-4xl mx-auto border border-orange-200 dark:border-orange-700 animate-fade-in text-center">
-                        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                            I share my thoughts on new technologies, coding best practices, and lessons learned from my projects on my blog.
+                    <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:bg-blue-100 dark:hover:bg-gray-600 transition-shadow duration-300 transform hover:-translate-y-1 max-w-4xl mx-auto border border-orange-200 dark:border-orange-700 animate-fade-in">
+                        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                            This section is where I plan to share my thoughts on new technologies, coding best practices, and lessons learned from my projects. Stay tuned for articles and reflections on my journey in full-stack development!
                         </p>
-                        <a
-                            href="https://tanisingh134.github.io/blogwebsite/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-block bg-orange-600 text-white px-8 py-4 rounded-full font-bold hover:bg-orange-700 transition-colors duration-300 shadow-md transform hover:scale-105"
-                        >
-                            Visit My Blog
-                        </a>
+                        <p className="text-md mt-4 text-gray-600 dark:text-gray-400">
+                            (Coming Soon: Technical deep-dives, project post-mortems, and more!)
+                        </p>
                     </div>
                 </div>
             </section>
@@ -468,18 +462,9 @@ const Sidebar = ({ darkMode, setDarkMode, showSidebar, toggleSidebar }) => {
                         <div className="max-w-lg mx-auto">
                             <p className="text-lg mb-6 leading-relaxed">I'm currently seeking new opportunities and challenges. Feel free to connect!</p>
                             <div className="flex justify-center space-x-6 mb-8 text-xl">
-                                <a href="mailto:tanisingh197@gmail.com" className="underline hover:text-blue-400 transition flex items-center">
-                                    <i className="fas fa-envelope mr-2"></i>
-                                    tanisingh197@gmail.com
-                                </a>
-                                <a href="https://www.linkedin.com/in/tani-singh" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400 transition flex items-center">
-                                    <i className="fab fa-linkedin mr-2"></i>
-                                    tani-singh
-                                </a>
-                                <a href="https://github.com/tanisingh134" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400 transition flex items-center">
-                                    <i className="fab fa-github mr-2"></i>
-                                    tanisingh134
-                                </a>
+                                <p>Email: <a href="mailto:tanisingh197@gmail.com" className="underline hover:text-blue-400 transition flex items-center"><i className="fas fa-envelope mr-2"></i>tanisingh197@gmail.com</a></p>
+                                <p>LinkedIn: <a href="https://www.linkedin.com/in/tani-singh" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400 transition flex items-center"><i className="fab fa-linkedin mr-2"></i>tani-singh</a></p>
+                                <p>GitHub: <a href="https://github.com/tanisingh134" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400 transition flex items-center"><i className="fab fa-github mr-2"></i>tanisingh134</a></p>
                             </div>
                             <form onSubmit={handleSubmit} className="mt-8 bg-gray-800 p-8 rounded-xl shadow-lg border border-yellow-500">
                                 <input
